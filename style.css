@@ -1,0 +1,146 @@
+:root {
+  --clr-Red: hsl(0, 78%, 62%);
+  --clr-Cyan: hsl(180, 62%, 55%);
+  --clr-Orange: hsl(34, 97%, 64%);
+  --clr-Blue: hsl(212, 86%, 64%);
+
+  --clr-Very-Dark-Blue: hsl(234, 12%, 34%);
+  --clr-Grayish-Blue: hsl(229, 6%, 66%);
+  --clr-Very-Light-Gray: hsl(0, 0%, 98%);
+
+  --fw-200: 200;
+  --fw-400: 400;
+  --fw-600: 600;
+}
+
+/* CSS Rest */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--clr-Very-Light-Gray);
+  font-weight: var(--fw-400);
+}
+
+
+/* End CSS Rest */
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+header {
+  text-align: center;
+  margin-block: 5rem;
+
+  & .title {
+    color: var(--clr-Very-Dark-Blue);
+    font-weight: var(--fw-200);
+    font-size: 2.2rem;
+    margin-bottom: .6rem;
+
+    & .title--bold {
+      font-weight: var(--fw-600);
+    }
+  }
+
+  & .description {
+    color: var(--clr-Grayish-Blue);
+    font-size: 1rem;
+    font-weight: var(--fw-400);
+    text-align: center;
+  }
+}
+
+.section {
+  width: 60rem;
+}
+
+.features {
+  --gap: 2rem;
+  display: flex;
+  gap: var(--gap);
+  margin-bottom: 5rem;
+}
+
+.features * {
+  flex: 1;
+}
+
+.col {
+  display: grid;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  border-top: .3rem solid;
+  border-radius: .4rem;
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 .8rem 1rem rgb(216 226 238 / .7);
+}
+
+.card__title {
+  font-size: 1.2rem;
+  font-weight: var(--fw-600);
+  color: var(--clr-Very-Dark-Blue);
+}
+
+.card__description {
+  color: var(--clr-Grayish-Blue);
+  font-size: .8rem;
+  font-weight: var(--fw-400);
+}
+
+.card__icon {
+  width: 4rem;
+  margin-left: auto;
+  margin-top: 1rem;
+}
+
+.border--blue {
+  border-color: var(--clr-Blue);
+}
+
+.border--red {
+  border-color: var(--clr-Red);
+}
+
+.border--cyan {
+  border-color: var(--clr-Cyan);
+}
+
+.border--orange {
+  border-color: var(--clr-Orange);
+}
